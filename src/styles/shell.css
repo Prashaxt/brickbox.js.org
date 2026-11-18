@@ -1,0 +1,55 @@
+/* Shared shell tweaks */
+
+/* the sidebar card is now a link to the changelog */
+a.sbcard {
+  color: var(--ink);
+  text-decoration: none;
+}
+a.sbcard b {
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+a.sbcard:hover,
+a.sbcard:focus-visible {
+  background: var(--yellow);
+}
+
+/* extra height the back-arrow row adds to the docs and playground headers */
+:root {
+  --back-h: 38px;
+}
+
+/* back arrow above the logo, on the docs and playground pages */
+.backlink {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 2px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+}
+.backlink svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.backlink:hover,
+.backlink:focus-visible {
+  background: var(--yellow);
+}
+
+/* logo + page title on one row */
+.hrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

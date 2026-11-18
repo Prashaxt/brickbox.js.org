@@ -1,0 +1,244 @@
+/* Documentation page only. Loaded after global.css. */
+
+:root {
+  --dh: 112px; /* height of the docs header: arrow row + logo row */
+  --dnav: 250px; /* width of the docs sidebar */
+}
+
+/* header: brickbox name + page title, fixed so the sidebar and sticky headings can sit under it */
+.docsbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  height: var(--dh);
+  padding: 0 var(--g);
+  background: var(--bg);
+  font-family: "Vina Sans";
+}
+.docsbar .pgtitle {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--ink);
+  font: 400 2.4rem/1 "Vina Sans";
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+main.docs {
+  margin-left: calc(var(--dnav) + var(--g));
+  padding: var(--dh) var(--g) 0 0;
+}
+
+/* sidebar: plain text rows, never scrolls */
+.dnav {
+  position: fixed;
+  top: var(--dh);
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  width: var(--dnav);
+  padding: 14px 0 0 var(--g);
+  overflow: hidden;
+}
+.dnav ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dnav a {
+  display: block;
+  padding: 7px 14px;
+  border-left: 3px solid #0f0f1422;
+  color: var(--ink);
+  font: 600 1rem/1.25 var(--b);
+  text-decoration: none;
+}
+.dnav a:hover {
+  border-left-color: var(--ink);
+  background: #0f0f140d;
+}
+.dnav a.on {
+  border-left-color: var(--blue);
+  background: #3d5afe14;
+  font-weight: 800;
+}
+@media (max-height: 640px) {
+  .dnav a {
+    padding: 4px 14px;
+    font-size: 0.92rem;
+  }
+}
+
+.dtoc-btn,
+.dscrim {
+  display: none;
+}
+
+/* content */
+.dcontent {
+  max-width: 980px;
+  padding-bottom: 160px;
+}
+.dsec {
+  scroll-margin-top: var(--dh);
+}
+.dsec + .dsec {
+  margin-top: 36px;
+}
+/* the heading sticks under the header until the next section pushes it away */
+.dh {
+  position: sticky;
+  top: var(--dh);
+  z-index: 5;
+  margin: 0;
+  padding: 14px 0 12px;
+  border-bottom: 2px solid var(--ink);
+  background: var(--bg);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+}
+.dbody {
+  display: grid;
+  gap: 16px;
+  padding-top: 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.dbody > * {
+  min-width: 0;
+}
+.dbody h3 {
+  margin-top: 10px;
+  font-size: 1.35rem;
+}
+.dbody h4 {
+  margin: 12px 0 4px;
+  font: 800 0.8rem var(--b);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.dbody p {
+  max-width: 78ch;
+}
+.dbody a {
+  color: var(--blue);
+}
+.dbody .code {
+  font-size: 0.95rem;
+}
+.dpanel {
+  display: grid;
+  gap: 14px;
+}
+.dnote {
+  max-width: 78ch;
+  padding: 12px 16px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--yellow);
+}
+.dlist,
+.drules {
+  display: grid;
+  gap: 10px;
+  max-width: 78ch;
+  margin: 0;
+  padding-left: 1.3em;
+}
+.drules {
+  gap: 14px;
+}
+.dq h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+.dq p {
+  margin-top: 4px;
+}
+.dver + .dver {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1.5px dashed #0f0f1433;
+}
+.dver h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+/* small docs tables (the big props table keeps its own styles) */
+.dtable {
+  min-width: 0;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  font-size: 0.95rem;
+}
+.dtable thead th {
+  position: static;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --dh: calc(64px + var(--back-h) + env(safe-area-inset-top, 0px));
+  }
+  .docsbar {
+    padding: env(safe-area-inset-top, 0px) 16px 0;
+    gap: 2px;
+  }
+  .docsbar .hrow {
+    gap: 14px;
+  }
+  .docsbar .pgtitle {
+    padding-left: 14px;
+    font-size: 1.8rem;
+  }
+  main.docs {
+    margin-left: 0;
+    padding-left: var(--g);
+  }
+  .dtoc-btn {
+    display: block;
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 10px);
+    right: 16px;
+    z-index: 96;
+    height: 36px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 15px;
+    background: var(--ink);
+    color: #fff;
+    font: 700 0.95rem var(--b);
+    cursor: pointer;
+  }
+  .dscrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 94;
+    background: #0f0f1466;
+  }
+  .dnav {
+    z-index: 95;
+    width: min(300px, 82vw);
+    padding-top: 14px;
+    background: var(--bg);
+    border-right: 2px solid var(--ink);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .dnav.open {
+    transform: none;
+  }
+  .dcontent {
+    padding-bottom: 100px;
+  }
+}

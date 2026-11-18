@@ -1,0 +1,167 @@
+<!-- 1. CAMERA -->
+<section class="xc xc1">
+ <div class="xtop"><span class="xpill">4 nested boxes + 5 parts</span></div>
+ <div class="xstage" id="s1">
+ <brick-box class="root" depth="34" control="both" tilt="12 -20" max-angle="38" side-color="transparent">
+ <div class="scene" id="cam">
+  <brick-box style="left:30px;top:130px;--z:0px" depth="34" side-color="rgb(176,16,64)">
+   <div class="f" style="width:340px;height:200px;border-radius:30px;background:linear-gradient(rgb(246,240,226) 0 36%,rgb(255,31,90) 36%)">
+     <!-- strap lugs -->
+     <brick-box style="left:-18px;top:34px;--z:0px" depth="20" side-color="rgb(10,6,24)"><div class="f" style="width:18px;height:44px;border-radius:9px 0 0 9px;background:rgb(26,16,51)"></div></brick-box>
+     <brick-box style="left:340px;top:34px;--z:0px" depth="20" side-color="rgb(10,6,24)"><div class="f" style="width:18px;height:44px;border-radius:0 9px 9px 0;background:rgb(26,16,51)"></div></brick-box>
+     <!-- viewfinder hump -->
+     <brick-box style="left:108px;top:-34px;--z:0px" depth="34" side-color="rgb(10,6,24)"><div class="f" style="width:124px;height:34px;border-radius:16px 16px 0 0;background:rgb(26,16,51)"><i style="position:absolute;left:22px;top:11px;width:30px;height:12px;border-radius:4px;background:rgb(90,110,180)"></i></div></brick-box>
+     <!-- shutter -->
+     <brick-box class="key" id="shutter" style="left:262px;top:-16px;--z:0px" depth="16" press-depth="4" side-color="rgb(190,110,0)"><div class="f" style="width:46px;height:16px;border-radius:9px 9px 0 0;background:rgb(255,171,0)"></div></brick-box>
+     <!-- flash lamp -->
+     <brick-box class="lamp" id="lamp" style="left:30px;top:24px;--z:10px" depth="10" side-color="rgb(200,170,60)"><div class="f" style="width:66px;height:40px;border-radius:10px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0 2px,transparent 2px 9px),linear-gradient(rgb(255,253,225),rgb(255,236,140))"></div></brick-box>
+     <!-- lens -->
+     <brick-box style="left:103px;top:30px;--z:30px" depth="30" side-color="rgb(160,164,182)">
+      <div class="f" style="width:134px;height:134px;border-radius:50%;background:rgb(36,38,54);border:8px solid rgb(205,209,220)">
+       <brick-box style="left:11px;top:11px;--z:8px" depth="8" side-color="rgb(10,10,22)">
+        <div class="f" style="width:100px;height:100px;border-radius:50%;background:rgb(20,22,34);border:6px solid rgb(70,74,98)">
+         <brick-box class="glass" id="glass" style="left:11px;top:11px;--z:12px" depth="12" side-color="rgb(9,22,74)">
+          <div class="f" style="width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgb(150,205,255),rgb(40,80,200) 55%,rgb(10,20,80)),rgb(40,80,200)"></div>
+         </brick-box>
+        </div>
+       </brick-box>
+      </div>
+     </brick-box>
+     <span class="lbl" style="left:26px;bottom:20px;color:#fff;font-size:12px;letter-spacing:.2em">BRICKCAM</span>
+     <i style="position:absolute;right:30px;bottom:20px;width:14px;height:14px;border-radius:50%;background:rgb(255,171,0);box-shadow:inset 0 0 0 3px rgba(0,0,0,.25)"></i>
+   </div>
+  </brick-box>
+ </div></brick-box>
+ </div>
+ <h2>Brick camera</h2>
+ <p>Body, lens barrel, lens ring, glass, flash, shutter and strap lugs are all separate boxes, each nested in the one below. Press the shutter.</p>
+</section>
+
+<!-- 2. REMOTE -->
+<section class="xc xc2">
+ <div class="xtop"><span class="xpill">11 pressable buttons</span></div>
+ <div class="xstage" id="s2">
+ <brick-box class="root" depth="34" control="both" tilt="10 -22" max-angle="38" side-color="transparent">
+ <div class="scene" id="rem">
+  <brick-box style="left:100px;top:14px;--z:0px" depth="30" side-color="rgb(20,12,42)">
+   <div class="f" style="width:200px;height:352px;border-radius:50px;background:linear-gradient(135deg,rgb(96,102,140),rgb(30,20,62))">
+    <i class="led" id="led" style="left:96px;top:14px"></i>
+    <brick-box class="key" data-key style="left:22px;top:36px;--z:12px" depth="12" press-depth="4" side-color="rgb(160,10,50)"><div class="f" style="width:42px;height:42px;border-radius:50%;background:rgb(255,31,90)"><i style="width:16px;height:16px;border-radius:50%;border:3px solid #fff;border-top-color:transparent"></i></div></brick-box>
+    <brick-box class="key" data-key style="left:79px;top:42px;--z:8px" depth="8" press-depth="3" side-color="rgb(20,40,160)"><div class="f" style="width:42px;height:30px;border-radius:15px;background:rgb(61,90,254);font-size:10px">SRC</div></brick-box>
+    <brick-box class="key" data-key style="left:136px;top:36px;--z:12px" depth="12" press-depth="4" side-color="rgb(190,110,0)"><div class="f" style="width:42px;height:42px;border-radius:50%;background:rgb(255,171,0);color:#0F0F14">M</div></brick-box>
+    <!-- d-pad -->
+    <brick-box class="key" data-key style="left:44px;top:96px;--z:12px" depth="12" press-depth="4" side-color="rgb(140,146,180)"><div class="f" style="width:112px;height:112px;background:rgb(232,234,244);clip-path:polygon(33% 0,67% 0,67% 33%,100% 33%,100% 67%,67% 67%,67% 100%,33% 100%,33% 67%,0 67%,0 33%,33% 33%)"><i class="arr" style="left:51px;top:8px">&#9650;</i><i class="arr" style="left:51px;top:90px">&#9660;</i><i class="arr" style="left:9px;top:50px">&#9664;</i><i class="arr" style="left:93px;top:50px">&#9654;</i></div></brick-box>
+    <brick-box class="key" data-key style="left:78px;top:130px;--z:20px" depth="8" press-depth="3" side-color="rgb(20,40,160)"><div class="f" style="width:44px;height:44px;border-radius:50%;background:rgb(61,90,254)">OK</div></brick-box>
+    <!-- colour keys -->
+    <brick-box class="key" data-key style="left:20px;top:228px;--z:8px" depth="8" press-depth="3" side-color="rgb(160,10,50)"><div class="f" style="width:34px;height:20px;border-radius:8px;background:rgb(255,31,90)"></div></brick-box>
+    <brick-box class="key" data-key style="left:62px;top:228px;--z:8px" depth="8" press-depth="3" side-color="rgb(0,120,50)"><div class="f" style="width:34px;height:20px;border-radius:8px;background:rgb(0,200,83)"></div></brick-box>
+    <brick-box class="key" data-key style="left:104px;top:228px;--z:8px" depth="8" press-depth="3" side-color="rgb(190,170,0)"><div class="f" style="width:34px;height:20px;border-radius:8px;background:rgb(255,234,0)"></div></brick-box>
+    <brick-box class="key" data-key style="left:146px;top:228px;--z:8px" depth="8" press-depth="3" side-color="rgb(150,40,190)"><div class="f" style="width:34px;height:20px;border-radius:8px;background:rgb(213,0,249)"></div></brick-box>
+    <!-- vol / ch -->
+    <brick-box class="key" data-key style="left:30px;top:264px;--z:12px" depth="12" press-depth="4" side-color="rgb(140,146,180)"><div class="f" style="width:52px;height:76px;border-radius:26px;background:rgb(232,234,244);color:rgb(40,44,70);font-size:18px"><i style="position:absolute;top:9px">+</i><i style="position:absolute;top:30px;font:800 8px 'DM Sans';letter-spacing:.12em">VOL</i><i style="position:absolute;bottom:9px">&minus;</i></div></brick-box>
+    <brick-box class="key" data-key style="left:118px;top:264px;--z:12px" depth="12" press-depth="4" side-color="rgb(140,146,180)"><div class="f" style="width:52px;height:76px;border-radius:26px;background:rgb(232,234,244);color:rgb(40,44,70);font-size:18px"><i style="position:absolute;top:9px">+</i><i style="position:absolute;top:30px;font:800 8px 'DM Sans';letter-spacing:.12em">CH</i><i style="position:absolute;bottom:9px">&minus;</i></div></brick-box>
+    <brick-box class="key" data-key style="left:86px;top:288px;--z:8px" depth="8" press-depth="3" side-color="rgb(0,120,50)"><div class="f" style="width:28px;height:28px;border-radius:50%;background:rgb(0,200,83)"></div></brick-box>
+   </div>
+  </brick-box>
+ </div></brick-box>
+ </div>
+ <h2>Remote control</h2>
+ <p>A rounded body with eleven real buttons. The D-pad is a clip-path cross with its own OK button on top, and every key sinks with pressDepth when you click it.</p>
+</section>
+
+<!-- 3. RADIO -->
+<section class="xc xc3">
+ <div class="xtop"><span class="xpill">ignore: turnable knobs</span></div>
+ <div class="xstage" id="s3">
+ <brick-box class="root" depth="40" control="both" tilt="10 -20" max-angle="38" side-color="transparent">
+ <div class="scene" id="rad">
+  <brick-box style="left:30px;top:130px;--z:0px" depth="40" side-color="rgb(190,100,0)">
+   <div class="f" style="width:340px;height:196px;border-radius:24px;background:linear-gradient(rgb(255,200,60),rgb(255,150,0))">
+    <!-- antenna -->
+    <brick-box style="left:296px;top:-124px;--z:0px;transform-origin:50% 100%;transform:translateZ(0px) rotate(20deg)" depth="8" side-color="rgb(150,152,170)">
+      <div class="f" style="width:8px;height:124px;border-radius:4px;background:rgb(205,209,220)">
+        <brick-box style="left:-8px;top:-10px;--z:10px" depth="10" side-color="rgb(160,10,50)"><div class="f" style="width:24px;height:24px;border-radius:50%;background:rgb(255,31,90)"></div></brick-box>
+      </div>
+    </brick-box>
+    <!-- handle -->
+    <brick-box style="left:70px;top:-30px;--z:0px" depth="14" side-color="rgb(10,6,24)"><div class="f" style="width:190px;height:30px;border-radius:16px 16px 0 0;background:rgb(26,16,51)"></div></brick-box>
+    <!-- speaker -->
+    <brick-box style="left:20px;top:28px;--z:10px" depth="10" side-color="rgb(10,6,24)">
+     <div class="f" style="width:130px;height:130px;border-radius:50%;background:repeating-radial-gradient(circle,rgb(70,52,110) 0 3px,rgb(36,26,64) 3px 7px),rgb(36,26,64);border:8px solid rgb(26,16,51)">
+      <brick-box class="cone" id="cone" style="left:35px;top:35px;--z:8px;transform:translateZ(8px)" depth="8" side-color="rgb(200,70,30)"><div class="f" style="width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgb(255,225,130),rgb(255,110,64))"></div></brick-box>
+     </div>
+    </brick-box>
+    <!-- display -->
+    <brick-box style="left:166px;top:26px;--z:8px" depth="8" side-color="rgb(10,40,32)">
+     <div class="f" style="width:154px;height:58px;border-radius:12px;background:rgb(12,40,34);border:4px solid rgb(26,16,51)">
+      <i class="ticks"></i><span class="disp-txt" id="freq">FM 98.0</span>
+      <brick-box id="needle" style="left:12px;top:3px;--z:5px" depth="5" side-color="rgb(160,10,50)"><div class="f" style="width:4px;height:26px;border-radius:2px;background:rgb(255,31,90)"></div></brick-box>
+     </div>
+    </brick-box>
+    <!-- knobs -->
+    <brick-box class="xknob" data-knob="tune" data-brickbox-ignore style="left:170px;top:98px;--z:18px" depth="18" press-depth="5" side-color="rgb(60,44,100)"><div class="f" style="width:56px;height:56px;border-radius:50%;background:rgb(26,16,51);border:5px solid rgb(205,209,220)"><i class="mk"></i></div></brick-box>
+    <brick-box class="xknob" data-knob="vol" data-brickbox-ignore style="left:254px;top:98px;--z:18px" depth="18" press-depth="5" side-color="rgb(60,44,100)"><div class="f" style="width:56px;height:56px;border-radius:50%;background:rgb(26,16,51);border:5px solid rgb(205,209,220)"><i class="mk"></i></div></brick-box>
+    <span class="lbl" style="left:178px;top:160px;color:rgb(26,16,51)">TUNE</span>
+    <span class="lbl" style="left:266px;top:160px;color:rgb(26,16,51)">VOL</span>
+    <!-- preset keys -->
+    <brick-box class="key" style="left:170px;top:174px;--z:8px" depth="8" press-depth="3" side-color="rgb(160,10,50)"><div class="f" style="width:44px;height:14px;border-radius:7px;background:rgb(255,31,90)"></div></brick-box>
+    <brick-box class="key" style="left:224px;top:174px;--z:8px" depth="8" press-depth="3" side-color="rgb(190,190,200)"><div class="f" style="width:44px;height:14px;border-radius:7px;background:rgb(250,250,255)"></div></brick-box>
+    <brick-box class="key" style="left:278px;top:174px;--z:8px" depth="8" press-depth="3" side-color="rgb(0,120,50)"><div class="f" style="width:44px;height:14px;border-radius:7px;background:rgb(0,200,83)"></div></brick-box>
+    <span class="lbl" style="left:24px;bottom:16px;color:rgb(26,16,51);font-size:11px;letter-spacing:.18em">BRICK 'N' ROLL</span>
+   </div>
+  </brick-box>
+ </div></brick-box>
+ </div>
+ <h2>Retro radio</h2>
+ <p>Drag the two knobs. They use the ignore prop, so the radio holds still while you turn them. Tune moves the needle, volume sets how hard the speaker cone beats.</p>
+</section>
+
+<!-- 4. ROBOT -->
+<section class="xc xc4">
+ <div class="xtop"><span class="xpill">20 boxes, one scene</span></div>
+ <div class="xstage" id="s4">
+ <brick-box class="root" depth="40" control="both" tilt="10 -20" max-angle="38" side-color="transparent">
+ <div class="scene" id="bot">
+  <!-- antenna -->
+  <brick-box style="left:196px;top:38px;--z:0px" depth="8" side-color="rgb(150,152,170)"><div class="f" style="width:8px;height:20px;background:rgb(205,209,220)"></div></brick-box>
+  <brick-box class="ball" id="ball" style="left:187px;top:12px;--z:14px" depth="14" side-color="rgb(160,10,50)"><div class="f" style="width:26px;height:26px;border-radius:50%;background:rgb(255,31,90)"></div></brick-box>
+  <!-- head -->
+  <brick-box style="left:112px;top:58px;--z:0px" depth="38" side-color="rgb(30,50,190)">
+   <div class="f" style="width:176px;height:124px;border-radius:32px;background:linear-gradient(rgb(110,130,255),rgb(61,90,254))">
+    <brick-box style="left:-16px;top:44px;--z:0px" depth="16" side-color="rgb(190,110,0)"><div class="f" style="width:16px;height:38px;border-radius:8px 0 0 8px;background:rgb(255,171,0)"></div></brick-box>
+    <brick-box style="left:176px;top:44px;--z:0px" depth="16" side-color="rgb(190,110,0)"><div class="f" style="width:16px;height:38px;border-radius:0 8px 8px 0;background:rgb(255,171,0)"></div></brick-box>
+    <brick-box class="eye" id="eyeL" style="left:28px;top:24px;--z:12px" depth="12" side-color="rgb(190,194,210)"><div class="f" style="width:50px;height:50px;border-radius:50%;background:#fff">
+      <brick-box class="pup" id="pupL" style="left:14px;top:14px;--z:8px" depth="8" side-color="rgb(5,5,10)"><div class="f" style="width:22px;height:22px;border-radius:50%;background:rgb(15,15,20)"></div></brick-box></div></brick-box>
+    <brick-box class="eye" id="eyeR" style="left:98px;top:24px;--z:12px" depth="12" side-color="rgb(190,194,210)"><div class="f" style="width:50px;height:50px;border-radius:50%;background:#fff">
+      <brick-box class="pup" id="pupR" style="left:14px;top:14px;--z:8px" depth="8" side-color="rgb(5,5,10)"><div class="f" style="width:22px;height:22px;border-radius:50%;background:rgb(15,15,20)"></div></brick-box></div></brick-box>
+    <brick-box style="left:46px;top:88px;--z:8px" depth="8" side-color="rgb(5,5,10)"><div class="f" style="width:84px;height:22px;border-radius:11px;background:rgb(26,16,51)"><i style="position:absolute;inset:4px 14px;background:repeating-linear-gradient(90deg,#fff 0 3px,transparent 3px 11px);border-radius:3px;opacity:.9"></i></div></brick-box>
+    <i style="position:absolute;left:12px;top:84px;width:16px;height:16px;border-radius:50%;background:rgb(255,128,171);opacity:.9"></i>
+    <i style="position:absolute;right:12px;top:84px;width:16px;height:16px;border-radius:50%;background:rgb(255,128,171);opacity:.9"></i>
+   </div>
+  </brick-box>
+  <!-- neck -->
+  <brick-box style="left:176px;top:182px;--z:0px" depth="24" side-color="rgb(30,30,46)"><div class="f" style="width:48px;height:22px;background:rgb(70,74,98)"></div></brick-box>
+  <!-- arms + hands -->
+  <brick-box style="left:56px;top:210px;--z:0px" depth="26" side-color="rgb(30,30,46)"><div class="f" style="width:38px;height:100px;border-radius:19px;background:rgb(70,74,98)"></div></brick-box>
+  <brick-box style="left:306px;top:210px;--z:0px" depth="26" side-color="rgb(30,30,46)"><div class="f" style="width:38px;height:100px;border-radius:19px;background:rgb(70,74,98)"></div></brick-box>
+  <brick-box style="left:52px;top:296px;--z:22px" depth="22" side-color="rgb(190,110,0)"><div class="f" style="width:46px;height:46px;border-radius:50%;background:rgb(255,171,0)"></div></brick-box>
+  <brick-box style="left:302px;top:296px;--z:22px" depth="22" side-color="rgb(190,110,0)"><div class="f" style="width:46px;height:46px;border-radius:50%;background:rgb(255,171,0)"></div></brick-box>
+  <!-- legs -->
+  <brick-box style="left:134px;top:330px;--z:0px" depth="26" side-color="rgb(30,30,46)"><div class="f" style="width:52px;height:34px;border-radius:0 0 14px 14px;background:rgb(70,74,98)"></div></brick-box>
+  <brick-box style="left:214px;top:330px;--z:0px" depth="26" side-color="rgb(30,30,46)"><div class="f" style="width:52px;height:34px;border-radius:0 0 14px 14px;background:rgb(70,74,98)"></div></brick-box>
+  <!-- torso -->
+  <brick-box style="left:100px;top:204px;--z:0px" depth="36" side-color="rgb(190,50,20)">
+   <div class="f" style="width:200px;height:126px;border-radius:28px;background:linear-gradient(rgb(255,142,84),rgb(255,96,56))">
+    <brick-box class="heart" id="heart" style="left:22px;top:24px;--z:10px;transform:translateZ(10px)" depth="10" side-color="rgb(160,10,50)"><div class="f" style="width:56px;height:48px;background:rgb(255,31,90);clip-path:path('M28 47.6C5.6 30.8 0 19.6 0 12.6C0 5 5.6 0 13.4 0C20.2 0 25.2 3.4 28 8.4C30.8 3.4 35.8 0 42.6 0C50.4 0 56 5 56 12.6C56 19.6 50.4 30.8 28 47.6Z')"></div></brick-box>
+    <brick-box class="key" data-bot="eyes" style="left:100px;top:26px;--z:10px" depth="10" press-depth="3" side-color="rgb(190,170,0)"><div class="f" style="width:28px;height:28px;border-radius:50%;background:rgb(255,234,0)"></div></brick-box>
+    <brick-box class="key" data-bot="ball" style="left:134px;top:26px;--z:10px" depth="10" press-depth="3" side-color="rgb(0,120,50)"><div class="f" style="width:28px;height:28px;border-radius:50%;background:rgb(0,200,83)"></div></brick-box>
+    <brick-box class="key" data-bot="heart" style="left:168px;top:26px;--z:10px" depth="10" press-depth="3" side-color="rgb(20,40,160)"><div class="f" style="width:28px;height:28px;border-radius:50%;background:rgb(61,90,254)"></div></brick-box>
+    <i style="position:absolute;left:100px;top:70px;width:96px;height:34px;border-radius:8px;background:repeating-linear-gradient(0deg,rgba(26,16,51,.55) 0 3px,transparent 3px 8px)"></i>
+    <i style="position:absolute;left:22px;top:92px;width:60px;height:10px;border-radius:5px;background:rgba(26,16,51,.25)"></i>
+   </div>
+  </brick-box>
+ </div></brick-box>
+ </div>
+ <h2>Robot buddy</h2>
+ <p>Eyes follow your pointer, built from a box inside a box inside the head. The three chest buttons blink the eyes, light the antenna and speed up the heart.</p>
+</section>

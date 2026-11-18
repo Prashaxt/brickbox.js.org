@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>brickbox: give any element real depth</title>
+  <meta name="description"
+    content="brickbox is a small open-source library that turns any element into a 3D slab. React, HTML custom element or plain JavaScript. About 9.8 KB gzipped, no dependencies.">
+  <link rel="canonical" href="https://prashaxt.github.io/brickbox/">
+  <meta property="og:title" content="brickbox: give any element real depth">
+  <meta property="og:description"
+    content="Wrap one element, set depth, and it becomes a 3D slab. The element stays real DOM.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prashaxt.github.io/brickbox/">
+  <meta property="og:image" content="https://prashaxt.github.io/brickbox/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"
+    content="brickbox logo, a flat brick-red slab, next to the words give any element real depth">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://prashaxt.github.io/brickbox/twitter-image.png">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAES0lEQVR42u2azW8bRRiHf+/seL1eXDdxjEjskIBUGvWA8qEi9YyQSKS0lx4QhH8AAYKKtkGCwAVxaBAgQFzbColKSHAhF6gEfwBKUXqAkhChVoiSJm1s76f3Y4aDnTRfbey2UhdnHsm3XdvPb2befXd2AYVCoVAoFAqFQrEXoYd28kNCqjF/QINIRDA1ygiR/EyllGBERIykEwnvvgPQGOHJND9V2mec0VMpSCkTO7qxlNC5hlgI+LUQi07t8D9eOEuN5cBb/VLGGB5P0cmhUuHMiePPBrmMwWMpElcR6vICmVQKq46LDy5c9D0/MLNcGwbC2bXjeKvyfSk6OdJbmH7nxefdUqHD9IMQjFGiihwBiIWEoXNYro/pb38GjwJ2IJ/Ftb9vORuP5y3KvzVcKkxPvTTmdudzpuX5YIwhjkSChp4Qi8bIWy5On/0ermXj+KFe/HK9DAloLQdAROjT2YnhYtdH702MuT35nOnUAmiMrf9oUoiFhKmnYHk+Js/NwLcdHB3ohRASQsptC5U1I9+f1t4cLnZ9PDUxul0+QcRCIqNzWF4Nk2dn4Fk2xg+WIITYUX7XABrybwz15D+Zmhh1i137Ey1v6By2V8PkuRm41Ya8XBv5nWfpXU360trrQz35T6deHqvL+8mWdxryTqWK8YHd5e8aQL+hvTbUnf/s3YlRt5jfbzpeXV4mTl7clj8/A7tSxdGBXkgp7zjtdy2CfQZ/dbiY/3xqYsztLXSYjh8gxbX1S0ySOjwzrcPyfLx9fgZWuYpjDfm4CflNARAARoQnzNQrg491fnH6hefc7s6cWbE9cI0hjOOEtbf1jvRm1cb7X/+A6j3Irwew1hb2PaIf60nzL1e8wP7wm5+y9SaHJfIeSjZactcPYEiB8YOlluW3LYEolp2HurLRkeI+7gYxNJZJ7P2jJIAT4buFZTxVyCHNCG4k0GpTuimAUMqoy0jxZ7pzkRtKMKJE39frjHDxWhm1WNxzfeJbLgkUSQknFHBDkfgAQkZNVfqWrgL1Ynj7k+QAHsT/Y9jjqABUACoAFYAKYM/IEomtfX3bByAbO3aCZOSEEWNE6T0VAAHQiILZ65Xs/Krz20oQX9j4iIy3ewAaUTD7b1m/vFK5Mm8Hh7c+GWJtL79Ul1+wwxEnEh7tlSKoEQWXlsr65eXK/IIdjthR7NEOOxus3QreRvm5uvzQneTbcAbIjSO/sJt82wXAia3Lzzch31YBaMSCSzfK+txydbEx8i41sZvJd1pHaw8Ukr7ehQRkY9r/eqOszy1XFhedcNBqUn5bABKINZBvcs1vtI6JDiDFCDpj4spNy3Sj6K8/7WDQjoRDLexjbwrA0KjjquUZX/2+ZMRCJv4lKCKCHcaoBuHVP+zg6Vbl11+RWTvp0TTvz3J2xIukYAQmk1/0RYYTuxXEP5bDeJXUW2D3+ZYY4f/fBCkUCoVCoVAoFIqm+A8YpSzEZmnEHgAAAABJRU5ErkJggg==">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Silkscreen&family=Archivo+Black&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
