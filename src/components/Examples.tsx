@@ -13,7 +13,7 @@ export default function Examples() {
 
   return (
     <>
-      <div className="s12 lp" id="examples">
+      <div className="s12 lp" id="examples" style={{borderTopLeftRadius: "0px", borderTopRightRadius: "0px"}}>
         <span>Examples</span>
         <small>Boxes inside boxes inside boxes</small>
       </div>

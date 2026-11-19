@@ -880,10 +880,10 @@
     [role=tab] {
       font: 700 .92rem var(--b);
       padding: .42em 1.05em;
-      border: 1.5px solid #fff8;
+      border: 1.5px solid var(--coral);
       border-radius: 999px;
       background: transparent;
-      color: #fff;
+      color: #000000;
       cursor: pointer;
       transition: background .15s, color .15s
     }
@@ -893,9 +893,9 @@
     }
 
     [role=tab][aria-selected=true] {
-      background: #fff;
-      color: var(--ink);
-      border-color: #fff
+      background: var(--coral);
+      color: #ffffff;
+      border-color: var(--coral);
     }
 
     ol.stp {

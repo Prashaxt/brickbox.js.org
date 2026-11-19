@@ -1,7 +1,7 @@
 export default function GoodToKnow() {
   return (
     <>
-      <div className="s12 lp">
+      <div className="s12 lp" style={{borderTopLeftRadius: "0px", borderTopRightRadius: "0px"}}>
         <span>Good to know</span>
         <small>What it does, and what it doesn’t</small>
       </div>
@@ -10,7 +10,7 @@ export default function GoodToKnow() {
         <div className="bot">
           <h3 style={{ fontSize: '1.5rem' }}>Tested on major browsers</h3>
           <p>
-            The author tested desktop and phone browsers, including Firefox, Safari and older mobile browsers. Nesting
+            Tested on desktop and phone browsers, including Firefox, Safari and older mobile browsers. Nesting
             (<code>lift</code>) is the newest feature, so it has had the least testing.
           </p>
         </div>
