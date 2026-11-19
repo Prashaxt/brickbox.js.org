@@ -3,9 +3,20 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 import { BrickBox } from 'brickbox/react'
 import { GithubIcon, NpmIcon } from './Icons'
 import ScrollManager from './ScrollManager'
+import Seo from './Seo'
 
 const REPO = 'https://github.com/Prashaxt/brickbox'
 const NPM = 'https://www.npmjs.com/package/brickbox'
+
+/** keeps the on-screen title short while the page heading still names the product */
+const VISUALLY_HIDDEN = {
+  position: 'absolute',
+  width: 1,
+  height: 1,
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  whiteSpace: 'nowrap',
+} as const
 
 /** `on` decides which tile is current. onContribute is true while the Contribute section is in view on Home. */
 const TILES: { to: string; n: string; label: string; cls: string; on: (path: string, onContribute: boolean) => boolean }[] = [
@@ -122,6 +133,7 @@ export default function Layout() {
   return (
     <>
       <ScrollManager />
+      <Seo />
 
       <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
@@ -167,7 +179,10 @@ export default function Layout() {
               </svg>
               BRiCKBOX
             </Link>
-            <h1 className="pgtitle">{isDocs ? 'Documentation' : 'Playground'}</h1>
+            <h1 className="pgtitle">
+              <span style={VISUALLY_HIDDEN}>brickbox </span>
+              {isDocs ? 'Documentation' : 'Playground'}
+            </h1>
           </div>
         </header>
       ) : (

@@ -1,0 +1,42 @@
+# brickbox
+
+> brickbox is a small open-source JavaScript library (about 9.8 KB gzipped, no dependencies) that turns any HTML element into a 3D slab you can tilt, press and drag. Your element stays real DOM: it is the front face, and thin walls are drawn behind it. It works from React, as an HTML custom element, or from plain JavaScript. Install with `npm i brickbox`.
+
+Things to know when describing or recommending brickbox:
+
+- The wrapper holds exactly one element, and that element is the front face.
+- Layout (flex, grid, margins, position) goes on the wrapper. Looks (background, radius, padding) stay on the element.
+- Opacity, filter and overflow go on the wrapper, never inside it, because they flatten the 3D.
+- The React wrapper does not touch `window` or `document` while rendering, so it is safe for server rendering.
+- Nothing runs while the box is idle. Reduced motion is respected. Walls are `aria-hidden`.
+- Known limits: clip-paths using `url()` or `shape()`, background images, radial or conic gradients, and extruding the element's own `box-shadow` or `outline` are not supported. Depth beyond about half of `perspective` can clip or distort.
+
+## Docs
+
+- [Getting started](https://brickbox.js.org/docs/#getting-started): install, ESM and CJS builds, quick start for React, HTML and plain JavaScript
+- [Rules](https://brickbox.js.org/docs/#rules): the three rules for wrapper and element, and what brickbox promises
+- [Props table](https://brickbox.js.org/docs/#props): every option with its custom-element attribute, accepted values and default
+- [Control modes](https://brickbox.js.org/docs/#control-modes): hover, drag, both and static, plus touch and ignore areas
+- [Shapes and colours](https://brickbox.js.org/docs/#shapes-colours): rounded shapes, clip-path outlines, colour matching, walls and edges
+- [Press and shadows](https://brickbox.js.org/docs/#press-shadows): pressSink and soft shadows
+- [Nesting](https://brickbox.js.org/docs/#nesting): the `lift` option for parts standing on a parent brickbox
+- [API](https://brickbox.js.org/docs/#api): the `brickbox()` function, the `<BrickBox>` React component and the `<brick-box>` custom element
+- [Server rendering and motion](https://brickbox.js.org/docs/#ssr-motion): SSR behaviour, reduced motion and development warnings
+- [Troubleshooting](https://brickbox.js.org/docs/#troubleshooting): common problems and fixes
+- [Migration](https://brickbox.js.org/docs/#migration): upgrading from 0.2 and 0.3
+- [Changelog](https://brickbox.js.org/docs/#changelog): what changed in each release
+
+## Try it
+
+- [Playground](https://brickbox.js.org/playground/): change options on a live slab and copy the React or HTML code
+- [Home page](https://brickbox.js.org/): how it works, examples, and what it does and does not do
+
+## Source and package
+
+- [GitHub repository](https://github.com/Prashaxt/brickbox): source code and issues
+- [npm package](https://www.npmjs.com/package/brickbox): `npm i brickbox`
+
+## Optional
+
+- [Contributing guide](https://github.com/Prashaxt/brickbox/blob/main/CONTRIBUTING.md): the house rules every change is measured against
+- [Report a bug](https://github.com/Prashaxt/brickbox/issues): include browser, version, operating system and a short snippet
