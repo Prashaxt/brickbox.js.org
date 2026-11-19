@@ -11,9 +11,18 @@ const template = (await readFile(path.join(dist, 'index.html'), 'utf8')).replace
 if (!template.includes('</head>')) throw new Error('dist/index.html has no </head>')
 if (!ROOT.test(template)) throw new Error('dist/index.html has no empty <div id="root"></div>')
 
-const { render, headTags, PAGES, NOT_FOUND } = await import(
-  pathToFileURL(path.resolve('dist-ssr/entry-server.js')).href
-)
+// src/vendor/brickbox-legacy.js declares `class extends HTMLElement` as soon as it loads, and Node has no
+// HTMLElement. Provide a stand-in only while the bundle is imported, then remove it so rendering
+// runs in a normal server environment. (Nothing is registered or run: the browser does that later.)
+const hadHTMLElement = 'HTMLElement' in globalThis
+if (!hadHTMLElement) globalThis.HTMLElement = class HTMLElement {}
+let entry
+try {
+  entry = await import(pathToFileURL(path.resolve('dist-ssr/entry-server.js')).href)
+} finally {
+  if (!hadHTMLElement) delete globalThis.HTMLElement
+}
+const { render, headTags, PAGES, NOT_FOUND } = entry
 
 // function replacers, so "$&" or "$'" in the rendered markup is never treated as a pattern
 const fill = (head, html) =>
