@@ -884,6 +884,8 @@
       border-radius: 999px;
       background: transparent;
       color: #000000;
+      color: #888888;
+      color: var(--coral);
       cursor: pointer;
       transition: background .15s, color .15s
     }
